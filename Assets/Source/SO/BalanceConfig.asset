@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04b343969c8c4276ac2180d4496de51b, type: 3}
+  m_Name: BalanceConfig
+  m_EditorClassIdentifier: Assembly-CSharp::Source.Scripts.Infrastructure.SO.BalanceConfig
+  Levels:
+  - Level: 1
+    Monsters:
+    - MonsterPrefab: {fileID: 117150395161187363, guid: 2b5371ce0e89b0544941743176d63e14, type: 3}
+      MonsterParameter:
+        BaseDamage: 10
+        MaxHealth: 1
+        BaseSpeed: 2
+        CriticalChance: 0.2
+        MultiplierCritical: 2.5
+    - MonsterPrefab: {fileID: 1423470163212545534, guid: 028d7e906bfe57b4a83e6d7373880785, type: 3}
+      MonsterParameter:
+        BaseDamage: 7
+        MaxHealth: 25
+        BaseSpeed: 2
+        CriticalChance: 0.25
+        MultiplierCritical: 2
+    - MonsterPrefab: {fileID: 4974177111213912524, guid: dc5e6f855a508c545a23fca60af62599, type: 3}
+      MonsterParameter:
+        BaseDamage: 5
+        MaxHealth: 1
+        BaseSpeed: 1
+        CriticalChance: 0.1
+        MultiplierCritical: 2
+    Waves:
+    - Duration: 10
+      SpawnInterval: 0.35
+      MaxQuantity: 15
+    - Duration: 20
+      SpawnInterval: 0.35
+      MaxQuantity: 25
+    - Duration: 30
+      SpawnInterval: 0.35
+      MaxQuantity: 35

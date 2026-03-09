@@ -1,38 +1,31 @@
 ﻿using DG.Tweening;
+using Reflex.Attributes;
+using Source.Scripts.GameBase;
 using UnityEngine;
 
 namespace Source.Scripts.Enemies
 {
-    public class EnemyMovement : Enemy
+    public class EnemyMovement : MonoBehaviour
     {
         [SerializeField] private float _speed = 3f;
 
+        [Inject] private GameModule _gameModule;
         private Tweener _movementTween;
-
-        public override void OnActive()
+        
+        public void StartMovement()
         {
-            base.OnActive();
-            StartMovement();
-        }
-
-        public override void InActive()
-        {
-            StopMovement();
-            base.InActive();
-        }
-
-        private void StartMovement()
-        {
-            if (!CurrentTarget)
+            if (!_gameModule.TargetForEnemy)
             {
-                Debug.LogWarning("EnemyMovement has no target assigned.", this);
+                Debug.Log($"EnemyMovement has no target assigned. [{_gameModule.TargetForEnemy}]");
                 return;
             }
 
+            
             StopMovement();
-
-            var destination = new Vector3(CurrentTarget.position.x, CurrentTarget.position.y, transform.position.z);
+            
+            var destination = new Vector3(_gameModule.TargetForEnemy.position.x, _gameModule.TargetForEnemy.position.y, transform.position.z);
             var origin2d = new Vector2(transform.position.x, transform.position.y);
+            
             var destination2d = new Vector2(destination.x, destination.y);
             var distance = Vector2.Distance(origin2d, destination2d);
 
@@ -47,7 +40,7 @@ namespace Source.Scripts.Enemies
                 .OnComplete(() => _movementTween = null);
         }
 
-        private void StopMovement()
+        public void StopMovement()
         {
             if (_movementTween?.IsActive() ?? false) 
                 _movementTween.Kill();

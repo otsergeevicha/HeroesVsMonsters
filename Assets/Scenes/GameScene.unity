@@ -628,6 +628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 540052064}
   - component: {fileID: 540052065}
+  - component: {fileID: 540052066}
   m_Layer: 0
   m_Name: '[GameModule]'
   m_TagString: Untagged
@@ -663,7 +664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c86d89df82944b1a867613af2fdfae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Source.Scripts.GameBase.GameModule
-  _targetForEnemy: {fileID: 3084998037520274024}
+  _targetForEnemy: {fileID: 1336022976}
   _spawnPoints:
     _flyingSpawnPoints:
     - {fileID: 188175464}
@@ -687,6 +688,18 @@ MonoBehaviour:
     - {fileID: 1656187990}
     - {fileID: 1740781719}
     - {fileID: 231460339}
+--- !u!114 &540052066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540052063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5843ae33eff5494ca43e99c66f283b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Source.Scripts.GameBase.EnemySpawner
 --- !u!1 &635005058
 GameObject:
   m_ObjectHideFlags: 0

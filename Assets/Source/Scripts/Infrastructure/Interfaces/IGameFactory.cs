@@ -1,4 +1,5 @@
-﻿using Source.Scripts.Enemies;
+﻿using Assets.FantasyMonsters.Common.Scripts;
+using Source.Scripts.Enemies;
 using Source.Scripts.HeroBase;
 using UnityEngine;
 
@@ -8,5 +9,6 @@ namespace Source.Scripts.Infrastructure.Interfaces
     {
         Enemy CreateEnemy(GameObject prefabLinkEnemy);
         Hero CreateHero(GameObject linkPrefab);
+        Monster CreateMonster(GameObject entityMonsterPrefab, Transform parent);
     }
 }

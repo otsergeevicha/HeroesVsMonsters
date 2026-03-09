@@ -10,5 +10,8 @@ namespace Source.Scripts.GameBase
         
         public Transform TargetForEnemy => 
             _targetForEnemy;
+
+        public SpawnPoints.SpawnPoints SpawnPoints =>
+            _spawnPoints;
     }
 }

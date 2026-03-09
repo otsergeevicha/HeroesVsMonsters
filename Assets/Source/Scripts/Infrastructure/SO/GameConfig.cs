@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Assets.FantasyMonsters.Common.Scripts;
 using UnityEngine;
 
 namespace Source.Scripts.Infrastructure.SO
@@ -9,7 +10,9 @@ namespace Source.Scripts.Infrastructure.SO
     {
         public SettingEnemies Enemies;
         public SettingHeroes Heroes;
-
+        [Space] [Header("Balance")]
+        public BalanceConfig Balance;
+        
         [Serializable]
         public class SettingEnemies
         {

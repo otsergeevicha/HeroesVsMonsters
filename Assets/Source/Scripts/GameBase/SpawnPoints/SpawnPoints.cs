@@ -36,7 +36,7 @@ namespace Source.Scripts.GameBase.SpawnPoints
                 return Vector3.zero;
             }
             
-            return _flyingSpawnPoints[Random.Range(0, _flyingSpawnPoints.Length)]
+            return currentArray[Random.Range(0, currentArray.Length)]
                 .position;
         }
     }

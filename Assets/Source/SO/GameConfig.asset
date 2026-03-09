@@ -17,3 +17,4 @@ MonoBehaviour:
     LinkPrefab: {fileID: 2155053574554303291, guid: 3a04c43fba1e93a4dac4879b23dc5406, type: 3}
   Heroes:
     Entities: []
+  Balance: {fileID: 11400000, guid: bdfa6f5610378234bb6c2d6511027701, type: 2}
