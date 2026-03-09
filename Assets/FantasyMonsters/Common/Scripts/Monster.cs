@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Assets.FantasyMonsters.Common.Scripts.Tweens;
+using Source.Scripts.Infrastructure.Enums;
 using UnityEngine;
 
 namespace Assets.FantasyMonsters.Common.Scripts
@@ -11,12 +12,18 @@ namespace Assets.FantasyMonsters.Common.Scripts
     /// </summary>
     public class Monster : MonoBehaviour
     {
+        [SerializeField] private TypeEnemyMovement _typeEnemyMovement;
+        
         public SpriteRenderer Head;
         public SpriteRenderer Jaw;
         public List<Sprite> HeadSprites;
         public List<Sprite> JawSprites;
         public Animator Animator;
         public bool Variations;
+        
+        public TypeEnemyMovement Type => 
+            _typeEnemyMovement;
+        
         public event Action<string> OnEvent = eventName => { };
 
         /// <summary>
